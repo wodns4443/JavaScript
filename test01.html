@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript" src="test.js">
+	
+	</script>
+</head>
+<body>
+	<button type="button" onclick="alert('클릭 발생')">클릭</button>
+	<script type="text/javascript">
+		var num = 1;
+		document.write("body 태그 내 실행 순서: " + num +"<br>")
+	</script>
+	<hr>
+	<script type="text/javascript">
+		var num; //변수 값이 없음
+		var obj = null // 객체 변수 값이 없음
+		document.write("1. 100 : " + typeof 100 + "<br>")
+		document.write("2. 10.5 : " + typeof 10.5 + "<br>")
+		document.write("3. 홍길동 : " + typeof "홍길동" + "<br>")
+		document.write("4. true : " + typeof true + "<br>")
+		document.write("5. [1,2,3,] : " + typeof [1,2,3,] + "<br>")
+		document.write("6. {name:홍길동} : " + typeof {name:'홍길동'} + "<br>")
+		document.write("7. num : " + typeof num + "<br>")
+		document.write("8. obj : " + typeof obj + "<br>")
+		
+		var test = prompt('입력 하세요')
+		document.write("===> "+test)
+		
+		var name = prompt('이름 입력 하세요')
+		var age = prompt('나이 입력 하세요')
+		var addr = prompt('주소 입력 하세요')
+		
+		document.write(
+			"<table border='1'>"+
+				"<tr>"+
+					"<th>이름</th><th>나이</th><th>주소</th>"+
+				"</tr>"+
+				"<tr>"+
+					"<th>"+name+"</th>"+"<th>"+age+"</th>"+"<th>"+addr+"</th>"+
+				"</tr>"+
+			"</table>"
+		)
+		
+	</script>
+	
+	
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		document.write("<h2>기본 연산자</h2>");
+			var incData=1; var decData=5; var r1=r2=0;
+			r1=15%6;  //나머지 연산
+			document.write("15%3 = " + r1 + "<br>");
+			document.write("incData++ = " + incData++ + "<br>");
+			document.write("++incData = " + ++incData + "<br>");
+			document.write("decData-- = " + decData-- + "<br>");
+			document.write("--decData = " + --decData + "<br>");
+			r2=incData*decData;
+			document.write("incData*decData = " + r2 + "<br>");
+			
+		document.write("<h2>관계 연산자</h2>");
+			var x=5; var y="5"; var result;
+			result=(x>y); document.write(" x > y : " + result + "<br>");
+			result=(x==y); document.write(" x == y : " + result + "<br>");
+			result=(x===y); document.write(" x === y : " + result + "<br>");
+			result=(x!=y); document.write(" x!= y : " + result + "<br>");
+			result=(x!==y); document.write(" x !== y : " + result + "<br>");
+			
+		document.write("<h2>논리 연산자</h2>");
+			document.write("(true && true) : " + (true && true) + "<br>");
+			document.write("(true && false) : " + (true && false) + "<br>");
+			document.write("(5>10 && 10>2) : " + (5>10 && 10>2) + "<br>");
+			document.write("(true || true) : " + (true && true) + "<br>");
+			document.write("(true || false) : " + (true && false) + "<br>");
+			document.write("(5>10 || 10>2) : " + (5>10 || 10>2) + "<br>");
+			document.write("!(5>10 || 10>2) : " + !(5>10 || 10>2) + "<br>");
+			document.write("!true : " + !true + "<br>");
+			
+		document.write("<h2>삼항 연산자</h2>");
+			var x=5; var y=7; var result;
+			result=(x > y)? x : y;
+			document.write("큰값 : " + result + "<br>");
+			result=(x > y)? x-y : y-x;
+			document.write("큰값-작은값 : " + result + "<br>");
+			
+		document.write("<h2>복합대입 연산자</h2>");
+		var x1=x2=x3=x4=x5=10; var st="hello"; x1+=1;
+		document.write("x1 : " + x1 + "<br>");
+		x2-=2; document.write("x2 : " + x2 + "<br>");
+		x3*=3; document.write("x3 : " + x3 + "<br>");
+		x4/=4; document.write("x4 : " + x4 + "<br>");
+		x5%=5; document.write("x5 : " + x5 + "<br>");
+		st+="Javascript"; document.write("st : " + st + "<br>");
+		
+		document.write("x4 : " + parseInt(x4) + "<br>");
+			
+	</script>
+</head>
+<body>
+
+</body>
+</html>

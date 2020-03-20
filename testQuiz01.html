@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		
+		.div { text-align:center; background: pink; width: 400px; height: 650px;}
+		.div img { width: 400px; height: 90%;}
+		.div button{ width: 30px; height: 10px;}
+	</style>
+	
+</head>
+<body>
+	<script type="text/javascript">
+	var i = 1;
+		function next(){
+			console.log("click")
+			if(i==8) i=1;
+			else
+			i++;
+			document.getElementById("myImage").src = "resources/images/최근상품0"+ i +".jpg";
+			}
+			
+		function prev(){
+			console.log("click")
+			if(i==1) i=8;
+			else
+			i--;
+			document.getElementById("myImage").src = "resources/images/최근상품0"+ i +".jpg";
+			}
+			
+			
+	</script>
+		
+	<div class="div">
+		<img id="myImage" class="image" src="resources/images/최근상품01.jpg">
+		<input type= "button" onclick="prev()" value="이전 사진">
+		<input type= "button" onclick="next()" value="다음 사진">
+	</div>
+</body>
+</html>

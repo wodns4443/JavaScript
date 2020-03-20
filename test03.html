@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	
+		document.write("<h2>if</h2>");
+			var gender="M"; var age=21;
+				if(gender == "M"){
+					if(age>=19){ result = "남자 성인입니다.";}
+					else { result="남자 미성년자 입니다.";}
+				}else { 
+					if(age>=19){ result="여자 성인입니다.";}
+					else { result= "여자 미성년자 입니다";}
+				}
+				document.write("당신은 " + result + "<p/>")
+	////////////////////////////////////////
+	document.write("<h2>else if</h2>");
+			var point=93; var grade="";
+			if(point>100){ document.write("0~100접 사이 값을 입력해야 합니다.<p/>");
+			}else if(point>=90){ grade="A"; document.write("아주 잘했어요.<p/>");
+			} else if(point>=80){ grade="B"; document.write("잘했어요.<p/>");
+			} else if(point>=70){ grade="C"; document.write("조금만 노력하면 잘할 수 있어요.<p/>");
+			} else if(point>=60){ grade="D"; document.write("좀더 노력하세요.<p/>");
+			} else{ grade="F"; document.write("많이 노력하시기 바랍니다.<p/>"); }
+			document.write("학생의 학점은 <b> " + grade + "</b>입니다.<p/>");
+	///////////////////////////////
+	document.write("<h2>switch</h2>");
+			var day; var week=new Date().getDay();  // 0(일요일) ~ 6(토요일)
+			switch(week){
+			case 0 : day="일요일"; break; case 1: day="월요일";break;
+			case 2 : day="화요일"; break; case 3: day="수요일";break;
+			case 4 : day="목요일"; break; case 5: day="금요일";break;
+			case 6 : day="토요일"; break; default: day="없는 요일";
+			}
+			document.write("오늘<b> " + day + "</b>입니다.<p/>");
+	//////////////////////////
+	document.write("<h2>for</h2>");
+		var x, y;
+		for(x=2; x<=5; x++){
+			document.write("<b> ---[" + x + "단]--- </b>" + "<br>");
+			for(y=1; y<=9; y++){
+				document.write(x + "*" + y + " = " + (x * y) + "<br>");
+			}
+		}
+	////////////////////////////
+	document.write("<h2>while</h2>");
+		var x=1; var sum=0;
+		while(x<=100) { sum+=x; x++;}
+		document.write("1~100까지 합: <b>" + sum + "</b>");
+		
+	///////////////////////////quiz
+		var floor = prompt("층수를 입력하세요.");
+		var i = floor;
+		document.write("<table border='1'>")
+		for(i; i>0; i--){
+			document.write(
+					"<tr>"+
+						"<td>" + i + "01호</td>" + "<td>" + i + "02호</td>" + "<td>" + i + "03호</td>" + "<td>" + i + "04호</td>" +
+					"</tr>"
+			)
+		}
+		document.write("</table>")
+	</script>
+</head>
+<body>
+
+</body>
+</html>

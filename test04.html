@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script>
+		function add(){ var sum=1; return sum};
+		//function add(x) { var sum=x+1; return sum;}
+		//function add(x, y) { var sum=x+y; return sum;}
+		//function add(x, y, z) { var sum=x+y+z; return sum;}
+	document.write("함수 호출 인자 없음 : " + add() + "<p/>")
+	document.write("함수 호출 인자 부족 : " + add(1) + "<p/>")
+	document.write("함수 호출 인자 부족 : " + add(2, 3) + "<p/>")
+	document.write("정상적인 함수 호출 : " + add(4, 5, 6) + "<p/>")
+	document.write("7,8,9만 인자값으로 적용 : " + add(7,8,9,10) + "<p/>")
+	
+		function printMsg(name, age){
+			document.write("name : " + name + "<br>")
+			document.write("age : " + age + "<hr>")
+		}
+		
+		
+		function getGrade01(){
+			var kor = 95;
+			return kor;
+		}
+		
+		getKor = getGrade01();
+		document.write( "return : " + getKor + "<hr>")
+		function getGrade(){
+			document.write("getGrade()함수 실행<br>");
+			let kor=95;
+			kor=100;
+			document.write("전역 변수 kor01 : " + kor01 + "<br>");
+		}
+		var kor01=100;
+		getGrade();
+		document.write("국어 점수 : " + kor01 + "<br>");
+	</script>
+</head>
+<body>
+	<button type="button" onclick="printMsg('정솔뫼',31)">클릭</button>
+	<h3 onclick="printMsg('김재운',27)">클릭</h3>
+</body>
+</html>
