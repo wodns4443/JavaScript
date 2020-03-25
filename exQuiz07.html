@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		#show {display:none;}
+		#show.a{display:block; background:yellow;}
+		#show.b{display:block; background:green;}
+		#show.c{display:block; background:pink;}
+	</style>
+	<script type="text/javascript">
+		function init(){
+			var b1 = document.getElementById('button1');
+			var b2 = document.getElementById('button2');
+			var b3 = document.getElementById('button3');
+			b1.addEventListener('click', btn_listener);
+			b2.addEventListener('click', btn_listener);
+			b3.addEventListener('click', btn_listener);
+		}
+		function btn_listener(event){
+			var a;
+			switch(event.button.id){
+			case 'button1': a='a';
+				document.getElementById('div').innerHTML=
+					'버튼 1 클릭';
+					
+			break;
+			case 'button2': a='b';
+				document.getElementById('div').innerHTML=
+					'버튼 2 클릭';
+					
+					break;
+			case 'button3': a='c';
+				document.getElementById('div').innerHTML=
+					'버튼 3 클릭';
+					
+					break;
+			}
+			let show = document.getElementById("show");
+			show.setAttribute('class',a);
+		}
+		function blockRM(){
+			let show = document.getElementById("show");
+			show.removeAttribute('class');
+		}
+	</script>
+</head>
+<body onload="init()">
+	
+	<input type="button" id="button1" value="버튼1" />
+	<input type="button" id="button2" value="버튼2" />
+	<input type="button" id="button3" value="버튼3" />
+	<input type="button" id="button1" value="자동" />
+	<input type="button" id="button1" value="지우기" />
+	
+	<div id="show"> </div>
+</body>
+</html>
