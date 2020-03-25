@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script>
+		function myFocus(){ document.getElementById("pw").focus(); }
+		function pwchk(){
+			inPut = document.getElementById("inPut").value;
+			document.getElementById("outPut").value = inPut;
+			document.getElementById("inPut").value ="";
+		}
+	</script>
+	<script type="text/javascript">
+		function myClick(){
+			alert("안녕하세요.\n환영합니다")
+			var result = confirm("처음 방문 입니까?")
+			if(result){
+				document.getElementById("myclick").innerHTML=
+					"처음 방문해 주셔서 감사합니다!!!"
+			} else {
+				document.getElementById("myclick").innerHTML=
+					"다시 방문해 주셔서 감사합니다!!!"
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="클릭" onclick="myClick()">
+	<p id="myclick"></p>
+<hr>
+	<script type="text/javascript"> function goBack() { window.history.back() }</script>
+	<input type="button" value="이전페이지" onclick="goBack()">
+<hr>
+	<input type="text" id="inPut" onchange="pwchk()"><br>
+	<input type="text" id="outPut"><br>
+	<input type="text"><br>
+<hr>
+	name : <input type="text"><br>
+	passwd : <input type="text" id="pw"><br>
+	<input type="button" value="focus" onclick="myFocus()">
+
+</body>
+</html>
